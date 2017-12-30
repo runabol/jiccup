@@ -22,8 +22,8 @@ public class Jiccup {
     return new HtmlElement ("div",aChildren);
   }
   
-  public static Html a (Html... aChildren) {
-    return new HtmlElement ("a",aChildren);
+  public static A a (Html... aChildren) {
+    return new A (aChildren);
   }
   
   public static Html span (Html... aChildren) {
@@ -57,6 +57,10 @@ public class Jiccup {
   
   public static Html h1 (Html... aChildren) {
     return new HtmlElement ("h1",aChildren);
+  }
+  
+  public static Html p (Html... aChildren) {
+    return new HtmlElement ("p",aChildren);
   }
   
   public static Html content (String aContent) {

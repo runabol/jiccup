@@ -23,17 +23,25 @@ public class SomeController {
                  div(
                     div(
                       button(
-                        span(content("Toggle navigation")).attr("class", "sr-only")
-                      ).attr("type", "button").attr("class", "navbar-toggle collapsed"),
-                      a(content("Project name")).attr("class", "navbar-brand")
-                    ).attr("class", "navbar-header"),
+                        span(content("Toggle navigation")).cssClass("sr-only")
+                      ).attr("type", "button").cssClass("navbar-toggle","collapsed"),
+                      a(content("Project name")).href("/").cssClass("navbar-brand")
+                    ).cssClass("navbar-header"),
                     div(
                        ul(
-                         li(a(content("Home")).attr("href", "/"))
-                       ).attr("class","nav navbar-nav")
-                    ).attr("id", "navbar").attr("class", "collapse navbar-collapse")
-                 ).attr("class", "container")
-               ).attr("class", "navbar navbar-inverse navbar-fixed-top")
+                         li(a(content("Home")).href("/")).cssClass("active"),
+                         li(a(content("About")).href("#about")),
+                         li(a(content("Contact")).href("#contact"))
+                       ).cssClass("nav","navbar-nav")
+                    ).id("navbar").cssClass("collapse","navbar-collapse")
+                 ).cssClass("container")
+               ).cssClass("navbar","navbar-inverse","navbar-fixed-top"),
+               div(
+                 div(
+                   h1(content("Bootstrap starter template")),
+                   p(content("Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.")).cssClass("lead")
+                 ).cssClass("starter-template")
+               ).cssClass("container")
             )
            ).render();
   }
