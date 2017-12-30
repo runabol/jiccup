@@ -4,6 +4,10 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
+/**
+ * @author Arik Cohen
+ * @since Dec 29, 2017
+ */
 public class Html implements HtmlElement {
   
   private final String tag;
@@ -36,11 +40,15 @@ public class Html implements HtmlElement {
     
     sb.append(">");
     
+    sb.append("\n");
+    
     for(HtmlElement element : children) {
       sb.append(element.render());
     }
     
     sb.append("</").append(tag).append(">");
+    
+    sb.append("\n");
     
     return sb.toString();
   }

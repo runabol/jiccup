@@ -6,6 +6,30 @@ public class Jiccup {
     return new Html ("html",aChildren);
   }
   
+  public static HtmlElement nav (HtmlElement... aChildren) {
+    return new Html ("nav",aChildren);
+  }
+  
+  public static HtmlElement div (HtmlElement... aChildren) {
+    return new Html ("div",aChildren);
+  }
+  
+  public static HtmlElement a (HtmlElement... aChildren) {
+    return new Html ("a",aChildren);
+  }
+  
+  public static HtmlElement span (HtmlElement... aChildren) {
+    return new Html ("span",aChildren);
+  }
+  
+  public static HtmlElement button (HtmlElement... aChildren) {
+    return new Html ("button",aChildren);
+  }
+  
+  public static HtmlElement title (String aTitle) {
+    return new Html ("title",content(aTitle));
+  }
+  
   public static HtmlElement head (HtmlElement... aChildren) {
     return new Html ("head",aChildren);
   }
