@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class SomeController {
+public class Starter {
   
   @ResponseBody
   @RequestMapping("/")
@@ -19,23 +19,7 @@ public class SomeController {
               title("Starter Template for Bootstrap")
             ),
             body(
-               nav(
-                 div(
-                    div(
-                      button(
-                        span(content("Toggle navigation")).cssClass("sr-only")
-                      ).attr("type", "button").cssClass("navbar-toggle","collapsed"),
-                      a(content("Project name")).href("/").cssClass("navbar-brand")
-                    ).cssClass("navbar-header"),
-                    div(
-                       ul(
-                         li(a(content("Home")).href("/")).cssClass("active"),
-                         li(a(content("About")).href("#about")),
-                         li(a(content("Contact")).href("#contact"))
-                       ).cssClass("nav","navbar-nav")
-                    ).id("navbar").cssClass("collapse","navbar-collapse")
-                 ).cssClass("container")
-               ).cssClass("navbar","navbar-inverse","navbar-fixed-top"),
+               navigation(),
                div(
                  div(
                    h1(content("Bootstrap starter template")),
@@ -44,6 +28,27 @@ public class SomeController {
                ).cssClass("container")
             )
            ).render();
+  }
+  
+  private Html navigation () {
+    return                
+      nav(
+        div(
+            div(
+              button(
+                span(content("Toggle navigation")).cssClass("sr-only")
+              ).attr("type", "button").cssClass("navbar-toggle","collapsed"),
+              a(content("Project name")).href("/").cssClass("navbar-brand")
+            ).cssClass("navbar-header"),
+            div(
+               ul(
+                 li(a(content("Home")).href("/")).cssClass("active"),
+                 li(a(content("About")).href("#about")),
+                 li(a(content("Contact")).href("#contact"))
+               ).cssClass("nav","navbar-nav")
+            ).id("navbar").cssClass("collapse","navbar-collapse")
+         ).cssClass("container")
+       ).cssClass("navbar","navbar-inverse","navbar-fixed-top");
   }
   
 }
