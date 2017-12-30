@@ -11,12 +11,25 @@
 	<name>jiccup</name>
 	<description>Hiccup Inspired Java HTML Library</description>
 
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<url>https://github.com/creactiviti/jiccup</url>
+	</scm>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<spring.boot.version>1.5.9.RELEASE</spring.boot.version>
 	</properties>
-	
+
 	<build>
 		<plugins>
 			<plugin>
@@ -100,7 +113,5 @@
 			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</repository>
 	</distributionManagement>
-
-
 
 </project>
