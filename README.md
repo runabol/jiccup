@@ -108,6 +108,10 @@ html (
 
 Which renders bootstrap's [starter](https://getbootstrap.com/docs/3.3/examples/starter-template/) template.
 
+# Spring Integration
+
+See [Spring Boot Starter Jiccup](https://github.com/creactiviti/spring-boot-starter-jiccup)
+
 # License
 
 Jiccup is released under version 2.0 of the Apache License.
