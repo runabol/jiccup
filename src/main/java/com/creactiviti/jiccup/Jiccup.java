@@ -10,6 +10,14 @@ public class Jiccup {
     return new HtmlElement ("nav",aChildren);
   }
   
+  public static Html ul (Html... aChildren) {
+    return new HtmlElement ("ul",aChildren);
+  }
+  
+  public static Html li (Html... aChildren) {
+    return new HtmlElement ("li",aChildren);
+  }
+  
   public static Html div (Html... aChildren) {
     return new HtmlElement ("div",aChildren);
   }

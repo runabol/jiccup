@@ -11,7 +11,7 @@ public class SomeController {
   
   @ResponseBody
   @RequestMapping("/")
-  public Html render () {
+  public String render () {
     return html (
             head (
               stylesheet("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"),
@@ -25,12 +25,17 @@ public class SomeController {
                       button(
                         span(content("Toggle navigation")).attr("class", "sr-only")
                       ).attr("type", "button").attr("class", "navbar-toggle collapsed"),
-                      a(content("Project name"))
-                    ).attr("class", "navbar-header")
+                      a(content("Project name")).attr("class", "navbar-brand")
+                    ).attr("class", "navbar-header"),
+                    div(
+                       ul(
+                         li(a(content("Home")).attr("href", "/"))
+                       ).attr("class","nav navbar-nav")
+                    ).attr("id", "navbar").attr("class", "collapse navbar-collapse")
                  ).attr("class", "container")
                ).attr("class", "navbar navbar-inverse navbar-fixed-top")
             )
-           );
+           ).render();
   }
   
 }

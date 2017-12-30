@@ -35,7 +35,9 @@ public class HtmlElement implements Html {
       sb.append(" ")
         .append(attr.getKey())
         .append("=")
-        .append(attr.getValue());
+        .append("\"")
+        .append(attr.getValue())
+        .append("\"");
     }
     
     sb.append(">");
