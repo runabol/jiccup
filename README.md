@@ -2,7 +2,7 @@
 
 Jiccup is a [Hiccup](https://github.com/weavejester/hiccup)-inpsired library for representing HTML in Java. 
 
-Watning: This project is still in an experimental phase. 
+Warning: This project is still in an experimental phase. 
 
 # Requirements
 
