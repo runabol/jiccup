@@ -18,17 +18,17 @@ Java 1.8+
 </dependency>
 
 <repositories>
-	<repository>
-		<id>maven-snapshots</id>
-		<url>http://oss.sonatype.org/content/repositories/snapshots</url>
-		<layout>default</layout>
-		<releases>
-			<enabled>false</enabled>
-		</releases>
-		<snapshots>
-			<enabled>true</enabled>
-		</snapshots>
-	</repository>
+   <repository>
+      <id>maven-snapshots</id>
+      <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+      <layout>default</layout>
+      <releases>
+         <enabled>false</enabled>
+      </releases>
+      <snapshots>
+         <enabled>true</enabled>
+      </snapshots>
+   </repository>
 </repositories>
 ```
 
