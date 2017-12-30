@@ -1,9 +1,5 @@
 package com.creactiviti.jiccup;
 
-/**
- * @author Arik Cohen
- * @since Dec 29, 2017
- */
 public class HtmlElement implements Element {
   
   private final String tag;

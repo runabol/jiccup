@@ -1,6 +1,6 @@
 package com.creactiviti.jiccup;
 
-public abstract class Jiccup {
+public abstract class Elements {
 
   public static Element html (Html... aChildren) {
     return element("html",aChildren);

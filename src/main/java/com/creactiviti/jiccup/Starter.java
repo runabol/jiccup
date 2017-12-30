@@ -1,6 +1,6 @@
 package com.creactiviti.jiccup;
 
-import static com.creactiviti.jiccup.Jiccup.*;
+import static com.creactiviti.jiccup.Elements.*;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
