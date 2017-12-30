@@ -8,11 +8,10 @@ import java.util.Map.Entry;
  * @author Arik Cohen
  * @since Dec 29, 2017
  */
-public class HtmlElement implements Html {
+public class HtmlElement implements Element {
   
   private final String tag;
   private final Html[] children;
-  private final Map<String, String> attributes = new LinkedHashMap<>();
   
   public HtmlElement (String aTag, Html... aChildren) {
     children = aChildren;
@@ -20,32 +19,26 @@ public class HtmlElement implements Html {
   }
 
   @Override
-  public Html attr (String name, String value) {
-    attributes.put(name, value);
-    return this;
-  }
-  
-  @Override
   public String render() {
     StringBuilder sb = new StringBuilder();
     
     sb.append("<").append(tag);
     
-    for(Entry<String, String> attr : attributes.entrySet()) {
-      sb.append(" ")
-        .append(attr.getKey())
-        .append("=")
-        .append("\"")
-        .append(attr.getValue())
-        .append("\"");
+    for(Html html : children) {
+      if(html instanceof Attribute) {
+        sb.append(" ")
+          .append(html.render());
+      }
     }
     
     sb.append(">");
     
     sb.append("\n");
     
-    for(Html element : children) {
-      sb.append(element.render());
+    for(Html html : children) {
+      if(html instanceof Element) {
+        sb.append(html.render());
+      }
     }
     
     sb.append("</").append(tag).append(">");

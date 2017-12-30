@@ -21,11 +21,12 @@ public class Starter {
             body(
                navigation(),
                div(
-                 div(
-                   h1(content("Bootstrap starter template")),
-                   p(content("Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.")).cssClass("lead")
-                 ).cssClass("starter-template")
-               ).cssClass("container")
+                 cssClass("container"),
+                 div(cssClass("starter-template"),
+                       h1(content("Bootstrap starter template")),
+                       p(cssClass("lead"),content("Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document."))
+                 )
+               )
             )
            ).render();
   }
@@ -33,22 +34,26 @@ public class Starter {
   private Html navigation () {
     return                
       nav(
+        cssClass("navbar","navbar-inverse","navbar-fixed-top"),
         div(
+            cssClass("container"),
             div(
-              button(
-                span(content("Toggle navigation")).cssClass("sr-only")
-              ).attr("type", "button").cssClass("navbar-toggle","collapsed"),
-              a(content("Project name")).href("/").cssClass("navbar-brand")
-            ).cssClass("navbar-header"),
+              cssClass("navbar-header"),
+              button(cssClass("navbar-toggle","collapsed"),span(cssClass("sr-only"),content("Toggle navigation")),attr("type", "button")),
+              a(href("/"),content("Project name"),cssClass("navbar-brand"))
+            ),
             div(
+               id("navbar"),
+               cssClass("collapse","navbar-collapse"),
                ul(
-                 li(a(content("Home")).href("/")).cssClass("active"),
-                 li(a(content("About")).href("#about")),
-                 li(a(content("Contact")).href("#contact"))
-               ).cssClass("nav","navbar-nav")
-            ).id("navbar").cssClass("collapse","navbar-collapse")
-         ).cssClass("container")
-       ).cssClass("navbar","navbar-inverse","navbar-fixed-top");
+                 cssClass("nav","navbar-nav"),
+                 li(a(href("/"),cssClass("active"),content("Home"))),
+                 li(a(href("#about"),content("About"))),
+                 li(a(href("#contact"),content("Contact")))
+               )
+            )
+         )
+       );
   }
   
 }
