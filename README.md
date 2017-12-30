@@ -39,6 +39,10 @@ Java 1.8+
 Here is a basic example of Jiccup's syntax:
 
 ```
+import static com.creactiviti.jiccup.Elements.*;
+
+...
+
 html (
   body(
     h1(content("Hello World"))
@@ -59,6 +63,10 @@ Which will render the following HTML:
 ## Bootstrap Example
 
 ```
+import static com.creactiviti.jiccup.Elements.*;
+
+...
+
 html (
     head (
       stylesheet("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"),
