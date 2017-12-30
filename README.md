@@ -36,7 +36,7 @@ Java 1.8+
 
 ## Hello World
 
-Here is a basic example of Jiccup syntax:
+Here is a basic example of Jiccup's syntax:
 
 ```
 html (
