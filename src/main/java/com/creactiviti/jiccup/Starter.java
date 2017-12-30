@@ -12,23 +12,27 @@ public class Starter {
   @ResponseBody
   @RequestMapping("/")
   public String render () {
+    return page ().render();
+  }
+  
+  private Html page () {
     return html (
-            head (
-              stylesheet("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"),
-              stylesheet("/starter-template.css"),
-              title("Starter Template for Bootstrap")
-            ),
-            body(
-               navigation(),
-               div(
-                 cssClass("container"),
-                 div(cssClass("starter-template"),
-                       h1(content("Bootstrap starter template")),
-                       p(cssClass("lead"),content("Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document."))
-                 )
-               )
-            )
-           ).render();
+        head (
+          stylesheet("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"),
+          stylesheet("/starter-template.css"),
+          title("Starter Template for Bootstrap")
+        ),
+        body(
+           navigation(),
+           div(
+             cssClass("container"),
+             div(cssClass("starter-template"),
+                   h1(content("Bootstrap starter template")),
+                   p(cssClass("lead"),content("Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document."))
+             )
+           )
+        )
+    );
   }
   
   private Html navigation () {
