@@ -1,49 +1,49 @@
 package com.creactiviti.jiccup;
 
-public class Jiccup {
+public abstract class Jiccup {
 
   public static Element html (Html... aChildren) {
-    return new HtmlElement ("html",aChildren);
+    return element("html",aChildren);
   }
   
   public static Element nav (Html... aChildren) {
-    return new HtmlElement ("nav",aChildren);
+    return element("nav",aChildren);
   }
   
   public static Element ul (Html... aChildren) {
-    return new HtmlElement ("ul",aChildren);
+    return element("ul",aChildren);
   }
   
   public static Element li (Html... aChildren) {
-    return new HtmlElement ("li",aChildren);
+    return element("li",aChildren);
   }
   
   public static Element div (Html... aChildren) {
-    return new HtmlElement ("div",aChildren);
+    return element("div",aChildren);
   }
   
   public static Element a (Html... aChildren) {
-    return new HtmlElement ("a",aChildren);
+    return element("a",aChildren);
   }
   
   public static Element span (Html... aChildren) {
-    return new HtmlElement ("span",aChildren);
+    return element("span",aChildren);
   }
   
   public static Element button (Html... aChildren) {
-    return new HtmlElement ("button",aChildren);
+    return element("button",aChildren);
   }
   
   public static Element title (String aTitle) {
-    return new HtmlElement ("title",content(aTitle));
+    return element("title",content(aTitle));
   }
   
   public static Element head (Html... aChildren) {
-    return new HtmlElement ("head",aChildren);
+    return element("head",aChildren);
   }
   
   public static Element link (Html... aChildren) {
-    return new HtmlElement ("link",aChildren);
+    return element("link",aChildren);
   }
   
   public static Element stylesheet (String aHref) {
@@ -55,15 +55,15 @@ public class Jiccup {
   }
   
   public static Element body (Html... aChildren) {
-    return new HtmlElement ("body",aChildren);
+    return element("body",aChildren);
   }
   
   public static Element h1 (Html... aChildren) {
-    return new HtmlElement ("h1",aChildren);
+    return element("h1",aChildren);
   }
   
   public static Element p (Html... aChildren) {
-    return new HtmlElement ("p",aChildren);
+    return element("p",aChildren);
   }
   
   public static Element content (String aContent) {
@@ -71,15 +71,19 @@ public class Jiccup {
   }
   
   public static Attribute href (String aValue) {
-    return new HtmlAttribute("href", aValue);
+    return attr("href", aValue);
   }
   
   public static Attribute cssClass (String... aClassNames) {
-    return new HtmlAttribute("class", String.join(" ", aClassNames));
+    return attr("class", String.join(" ", aClassNames));
   }
   
   public static Attribute id (String aId) {
-    return new HtmlAttribute("id", aId);
+    return attr("id", aId);
+  }
+  
+  public static Element element (String aName, Html... aChildren) {
+    return new HtmlElement (aName,aChildren);
   }
   
 }

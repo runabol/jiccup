@@ -20,5 +20,4 @@ public class HtmlAttribute implements Attribute {
             .append("\"").toString();
   }
   
-  
 }
