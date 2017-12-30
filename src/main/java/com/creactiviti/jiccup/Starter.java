@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class Starter {
   
   @ResponseBody
-  @RequestMapping("/")
+  @RequestMapping("/starter")
   public String render () {
     return page ().render();
   }
