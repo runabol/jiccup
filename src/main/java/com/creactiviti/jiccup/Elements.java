@@ -74,7 +74,7 @@ public abstract class Elements {
     return attr("href", aValue);
   }
   
-  public static Attribute cssClass (String... aClassNames) {
+  public static Attribute css (String... aClassNames) {
     return attr("class", String.join(" ", aClassNames));
   }
   

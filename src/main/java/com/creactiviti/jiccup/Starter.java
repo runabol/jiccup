@@ -25,10 +25,10 @@ public class Starter {
         body(
            navigation(),
            div(
-             cssClass("container"),
-             div(cssClass("starter-template"),
+             css("container"),
+             div(css("starter-template"),
                    h1(content("Bootstrap starter template")),
-                   p(cssClass("lead"),content("Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document."))
+                   p(css("lead"),content("Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document."))
              )
            )
         )
@@ -38,20 +38,20 @@ public class Starter {
   private Html navigation () {
     return                
       nav(
-        cssClass("navbar","navbar-inverse","navbar-fixed-top"),
+        css("navbar","navbar-inverse","navbar-fixed-top"),
         div(
-            cssClass("container"),
+            css("container"),
             div(
-              cssClass("navbar-header"),
-              button(cssClass("navbar-toggle","collapsed"),span(cssClass("sr-only"),content("Toggle navigation")),attr("type", "button")),
-              a(href("/"),content("Project name"),cssClass("navbar-brand"))
+              css("navbar-header"),
+              button(css("navbar-toggle","collapsed"),span(css("sr-only"),content("Toggle navigation")),attr("type", "button")),
+              a(href("/"),content("Project name"),css("navbar-brand"))
             ),
             div(
                id("navbar"),
-               cssClass("collapse","navbar-collapse"),
+               css("collapse","navbar-collapse"),
                ul(
-                 cssClass("nav","navbar-nav"),
-                 li(a(href("/"),cssClass("active"),content("Home"))),
+                 css("nav","navbar-nav"),
+                 li(a(href("/"),css("active"),content("Home"))),
                  li(a(href("#about"),content("About"))),
                  li(a(href("#contact"),content("Contact")))
                )
