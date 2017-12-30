@@ -66,7 +66,7 @@ html (
       title("Starter Template for Bootstrap")
     ),
     body(
-	  nav(
+      nav(
         css("navbar","navbar-inverse","navbar-fixed-top"),
         div(
             css("container"),
