@@ -11,7 +11,7 @@ public class SomeController {
   
   @ResponseBody
   @RequestMapping("/")
-  public HtmlElement render () {
+  public Html render () {
     return html (
             head (
               stylesheet("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"),

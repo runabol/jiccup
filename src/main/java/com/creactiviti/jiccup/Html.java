@@ -1,56 +1,11 @@
 package com.creactiviti.jiccup;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Map.Entry;
-
-/**
- * @author Arik Cohen
- * @since Dec 29, 2017
- */
-public class Html implements HtmlElement {
+public interface Html {
   
-  private final String tag;
-  private final HtmlElement[] children;
-  private final Map<String, String> attributes = new LinkedHashMap<>();
+  String render();
   
-  public Html (String aTag, HtmlElement... aChildren) {
-    children = aChildren;
-    tag = aTag;
-  }
-
-  @Override
-  public HtmlElement attr (String name, String value) {
-    attributes.put(name, value);
+  default Html attr (String name, String value) { 
     return this;
   }
   
-  @Override
-  public String render() {
-    StringBuilder sb = new StringBuilder();
-    
-    sb.append("<").append(tag);
-    
-    for(Entry<String, String> attr : attributes.entrySet()) {
-      sb.append(" ")
-        .append(attr.getKey())
-        .append("=")
-        .append(attr.getValue());
-    }
-    
-    sb.append(">");
-    
-    sb.append("\n");
-    
-    for(HtmlElement element : children) {
-      sb.append(element.render());
-    }
-    
-    sb.append("</").append(tag).append(">");
-    
-    sb.append("\n");
-    
-    return sb.toString();
-  }
-
 }
